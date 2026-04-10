@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">random</string>
+    <string name="inputBebek">Input Nomor Tujuan</string>
+    <string name="button1">KIRIM BEBEK</string>
+    <string name="bebek">Aplikasi Pengiriman Bebek</string>
+    <string name="success">SUCCESS!!!</string>
+    <string name="bebekotw">Bebek sudah dikirim!!\nSegera cek nomor anda!!!</string>
 </resources>

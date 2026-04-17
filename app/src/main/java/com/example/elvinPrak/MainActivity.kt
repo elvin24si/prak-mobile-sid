@@ -2,6 +2,7 @@ package com.example.elvinPrak
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        Log.e("onCreate", "MainActivity dibuat pertama kali")
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -28,5 +30,14 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("age", 25)
             startActivity(intent)
         }
+    }
+    override fun onStart() {
+        super.onStart()
+        Log.e("onStart", "onStart: MainActivity terlihat di layar")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.e("onDestroy", "MainActivity dihapus dari stack")
     }
 }

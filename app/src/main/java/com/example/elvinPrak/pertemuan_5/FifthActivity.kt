@@ -22,6 +22,13 @@ class FifthActivity : AppCompatActivity() {
 
         binding = ActivityFifthBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.toolbar.alpha = 0f
+        binding.toolbar.animate()
+            .alpha(1f)
+            .setDuration(1000)
+            .setStartDelay(300)
+            .start()
         
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {

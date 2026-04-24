@@ -1,6 +1,7 @@
 package com.example.elvinPrak.pertemuan_5
 
 import android.os.Bundle
+import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
@@ -16,10 +17,10 @@ class WebViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        
+
         binding = ActivityWebViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
+
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
             title = "Web Merdeka"
@@ -27,9 +28,17 @@ class WebViewActivity : AppCompatActivity() {
             setDisplayShowHomeEnabled(true)
         }
 
-        binding.webView.webViewClient = WebViewClient()
+        binding.webView.webViewClient = object : WebViewClient() {
+            override fun onPageFinished(view: WebView, url: String) {
+                super.onPageFinished(view, url)
+                val webTitle = view?.title
+                if (!webTitle.isNullOrEmpty()) {
+                    supportActionBar?.title = webTitle
+                }
+            }
+        }
         binding.webView.settings.javaScriptEnabled = true
-        binding.webView.loadUrl("https://merdeka.com")
+        binding.webView.loadUrl("https://youtube.com")
 
         // Hide/show toolbar on scroll
         binding.webView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
@@ -63,4 +72,5 @@ class WebViewActivity : AppCompatActivity() {
         onBackPressedDispatcher.onBackPressed()
         return true
     }
+
 }

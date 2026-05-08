@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.elvinPrak.databinding.ActivityMainBinding
+import com.example.elvinPrak.pertemuan_7.SeventhActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -34,6 +35,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.logoutBtn.setOnClickListener {
             showLogoutConfirmation(sharedPref)
+        }
+        binding.btn7.setOnClickListener {
+            val intent = Intent(this, SeventhActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -62,6 +67,7 @@ class MainActivity : AppCompatActivity() {
             }
             .show()
     }
+
 
     override fun onStart() {
         super.onStart()

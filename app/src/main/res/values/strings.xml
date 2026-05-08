@@ -3,6 +3,11 @@
     <string name="inputBebek">Input Nomor Tujuan</string>
     <string name="button1">KIRIM BEBEK</string>
     <string name="bebek">Aplikasi Pengiriman Bebek</string>
+    <string name="bebek1">Bebek 1</string>
+    <string name="bebek2">Bebek 2</string>
+    <string name="bebek3">Bebek 3</string>
     <string name="success">SUCCESS!!!</string>
     <string name="bebekotw">Bebek sudah dikirim!!\nSegera cek nomor anda!!!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

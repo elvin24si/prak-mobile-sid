@@ -8,7 +8,7 @@
     android:padding="24dp"
     android:layout_margin="24dp"
     android:background="#F8FAFF"
-    tools:context=".pertemuan_2.SecondActivity">
+    tools:context=".Home.pertemuan_2.SecondActivity">
 
     <!-- Text Logo / Brand Name -->
     <TextView

@@ -1,6 +1,5 @@
-package com.example.elvinPrak.pertemuan_7
+package com.example.elvinPrak.Home.pertemuan_7
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -9,8 +8,6 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.elvinPrak.R
 import com.example.elvinPrak.databinding.ActivitySeventhBinding
-import com.example.elvinPrak.databinding.ActivityWebViewBinding
-import com.example.elvinPrak.pertemuan_3.ThirdResultActivity
 
 class SeventhActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySeventhBinding

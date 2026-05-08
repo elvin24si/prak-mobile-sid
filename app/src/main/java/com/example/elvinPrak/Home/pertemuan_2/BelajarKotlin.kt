@@ -1,4 +1,4 @@
-package com.example.elvinPrak.pertemuan_2
+package com.example.elvinPrak.Home.pertemuan_2
 
 fun main() {
     println("Hai rekan-rekan...")

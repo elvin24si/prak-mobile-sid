@@ -15,20 +15,19 @@
         android:theme="@style/Theme.Random">
         <activity
             android:name=".BaseActivity"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".Home.pertemuan_7.SeventhActivity"
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".AuthActivity"
             android:exported="false" />

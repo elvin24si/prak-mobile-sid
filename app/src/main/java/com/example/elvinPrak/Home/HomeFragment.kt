@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.example.elvinPrak.AuthActivity
 import com.example.elvinPrak.Home.pertemuan_2.SecondActivity
 import com.example.elvinPrak.Home.pertemuan_3.ThirdActivity
@@ -33,6 +34,11 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
+        (requireActivity() as AppCompatActivity).supportActionBar?.apply {
+            title = "Home"
+        }
 
         // 2. Initialize SharedPreferences
         sharedPref = requireContext().getSharedPreferences("YourPrefName", android.content.Context.MODE_PRIVATE)

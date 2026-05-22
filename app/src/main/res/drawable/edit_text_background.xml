@@ -11,7 +11,7 @@
         android:color="#BDBDBD" />
 
     <!-- Sudut yang membulat -->
-    <corners android:radius="8dp" />
+    <corners android:radius="30dp" />
 
     <!-- Padding di dalam EditText -->
     <padding

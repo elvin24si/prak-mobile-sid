@@ -16,6 +16,7 @@ import com.example.elvinPrak.Home.pertemuan_3.ThirdActivity
 import com.example.elvinPrak.Home.pertemuan_4.FourthActivity
 import com.example.elvinPrak.Home.pertemuan_5.FifthActivity
 import com.example.elvinPrak.Home.pertemuan_7.SeventhActivity
+import com.example.elvinPrak.Home.pertemuan_9.NinthActivity
 import com.example.elvinPrak.R
 import com.example.elvinPrak.databinding.FragmentHomeBinding
 
@@ -70,6 +71,12 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), SeventhActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btn9.setOnClickListener{
+            val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.logoutBtn.setOnClickListener {
             showLogoutConfirmation()
         }

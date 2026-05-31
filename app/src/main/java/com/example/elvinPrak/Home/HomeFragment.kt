@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.elvinPrak.AuthActivity
+import com.example.elvinPrak.Home.pertemuan_10.TenthActivity
 import com.example.elvinPrak.Home.pertemuan_2.SecondActivity
 import com.example.elvinPrak.Home.pertemuan_3.ThirdActivity
 import com.example.elvinPrak.Home.pertemuan_4.FourthActivity
@@ -74,6 +75,11 @@ class HomeFragment : Fragment() {
 
         binding.btn9.setOnClickListener{
             val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btn10.setOnClickListener{
+            val intent = Intent(requireContext(), TenthActivity::class.java)
             startActivity(intent)
         }
 

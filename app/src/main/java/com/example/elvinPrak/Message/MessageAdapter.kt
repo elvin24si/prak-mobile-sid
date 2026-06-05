@@ -18,7 +18,7 @@ class MessageAdapter(
         val binding: ItemMessageBinding = ItemMessageBinding.inflate(LayoutInflater.from(context), parent, false)
         val view = binding.root
 
-        val data = Messages[position]
+        val `data` = Messages[position]
 
         Glide.with(context)
             .load(data.avatarUrl)

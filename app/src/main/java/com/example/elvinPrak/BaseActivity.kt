@@ -1,6 +1,7 @@
 package com.example.elvinPrak
 
 import android.os.Bundle
+import android.provider.ContactsContract
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment
 import com.example.elvinPrak.Home.HomeFragment
 import com.example.elvinPrak.Message.MessageFragment
 import com.example.elvinPrak.More.MoreFragment
+import com.example.elvinPrak.Note.NoteFragment
 import com.example.elvinPrak.databinding.ActivityBaseBinding
 import com.example.elvinPrak.databinding.ActivityMainBinding
 
@@ -41,6 +43,11 @@ class BaseActivity : AppCompatActivity() {
                     Toast.makeText(this, "More Clicked", Toast.LENGTH_SHORT).show()
                     true
                 }
+                R.id.note -> {
+                    Toast.makeText(this, "More Clicked", Toast.LENGTH_SHORT).show()
+
+                    true
+                }
                 else -> false // return false jika item tidak ada yang di klik
             }
         }
@@ -59,6 +66,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.more -> {
                     replaceFragment(MoreFragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
                     true
                 }
                 else ->false

@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.elvinPrak.AuthActivity
 import com.example.elvinPrak.Home.Photo.PhotoAdapter
 import com.example.elvinPrak.Home.pertemuan_10.TenthActivity
+import com.example.elvinPrak.Home.pertemuan_13.ThirteenthActivity
 import com.example.elvinPrak.Home.pertemuan_2.SecondActivity
 import com.example.elvinPrak.Home.pertemuan_3.ThirdActivity
 import com.example.elvinPrak.Home.pertemuan_4.FourthActivity
@@ -87,6 +88,11 @@ class HomeFragment : Fragment() {
 
         binding.btn10.setOnClickListener{
             val intent = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btn13.setOnClickListener{
+            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
             startActivity(intent)
         }
 

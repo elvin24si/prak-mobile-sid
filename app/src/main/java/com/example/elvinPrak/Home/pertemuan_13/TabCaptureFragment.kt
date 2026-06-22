@@ -57,6 +57,18 @@ class TabCaptureFragment : Fragment() {
         ) == PackageManager.PERMISSION_GRANTED
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btnCapture.setOnClickListener {
+            if (hasCameraPermission()) {
+                openCamera()
+            } else {
+                permissionLauncher.launch(Manifest.permission.CAMERA)
+            }
+        }
+    }
+
     private fun openCamera() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         //generate alamat tempat penyimpanan dan nama foto

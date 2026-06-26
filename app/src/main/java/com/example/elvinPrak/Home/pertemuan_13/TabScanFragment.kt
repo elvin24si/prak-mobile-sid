@@ -1,7 +1,6 @@
 package com.example.elvinPrak.Home.pertemuan_13
 
 import android.Manifest
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -15,8 +14,7 @@ import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
-import com.example.elvinPrak.PermissionHelper
-import com.example.elvinPrak.R
+import com.example.elvinPrak.utils.PermissionHelper
 import com.example.elvinPrak.databinding.FragmentTabScanBinding
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning

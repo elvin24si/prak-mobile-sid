@@ -1,4 +1,4 @@
-package com.example.elvinPrak
+package com.example.elvinPrak.utils
 
 import android.content.Context
 import android.content.pm.PackageManager

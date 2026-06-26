@@ -15,8 +15,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
-import com.example.elvinPrak.PermissionHelper
-import com.example.elvinPrak.R
+import com.example.elvinPrak.utils.PermissionHelper
 import com.example.elvinPrak.databinding.FragmentTabCaptureBinding
 
 class TabCaptureFragment : Fragment() {

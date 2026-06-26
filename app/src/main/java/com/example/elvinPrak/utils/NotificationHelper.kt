@@ -1,4 +1,4 @@
-package com.example.elvinPrak
+package com.example.elvinPrak.utils
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

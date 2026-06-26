@@ -7,7 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.elvinPrak.Home.HomeFragment
 import com.example.elvinPrak.MainActivity
+import com.example.elvinPrak.NotificationHelper
 import com.example.elvinPrak.R
 import com.example.elvinPrak.databinding.ActivityFourthBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -39,6 +41,13 @@ class FourthActivity : AppCompatActivity() {
         super.onStart()
         Log.e("onStart", "onStart: FourthActivity terlihat di layar")
         binding.btnShowSnackbar.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            NotificationHelper.showNotification(
+                this, //Jika panggil di fragment maka requireContext()
+                "aaa",
+                "Halo, snackbar sudah tampil!",
+                intent
+            )
             Snackbar.make(binding.root, "Ini adalah Snackbar", Snackbar.LENGTH_SHORT)
                 .setAction("Tutup"){
                     Log.e("Info Snackbar","Snackbar ditutup")
